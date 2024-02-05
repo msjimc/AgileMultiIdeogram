@@ -8,7 +8,7 @@ VCF files have a complex structure with the start consisting of a number of line
 |-|-|-|-|-|
 |#CHROM|Chromosome|The name of the reference sequence in the reference genome. For autosomal chromosomes it is a number (1-22). X, Y and MT typically refer to the mitochondrial and sex chromosomes. Other sequences may be present that contain unlocated sequences, common viruses or common alternative haplotypes these tend to have complex names. <br /><br />These names may have the 'chr' prefix.|Only variants with values of 1 to 22 or chr1 to chr22 are retained|Yes|
 |POS|Position|The variant's location in the reference sequence (The first base of the reference may be referenced as 0 and not 1).|Any whole number|Yes|
-|ID|Variant name| This can be any text value, but is typically either a RS id or a '.'|```AgileROHMultiIdeogram``` may filter variants based on the presence of 'RS' at the start of the name|Optional|
+|ID|Variant name| This can be any text value, but is typically either a RS id or a '.'|```AgileMultiIdeogram``` may filter variants based on the presence of 'RS' at the start of the name|Optional|
 |REF|Variant's wild type allele|Any possible sequence of A, C, G and T|Only alleles of one nucleotide are retained|Yes|
 |ALT|Variant's alternative allele(s)|Any possible sequence of A, C, G and T. If a variant is heterozygous for two none reference alleles each allele will be separated by a comma.|Only variants with a single, 1 base Alt allele are retained |Yes|
 |QUAL|Quality score|Any number or '.'|An aligner/variant caller specific score of the variant's quality|No|
