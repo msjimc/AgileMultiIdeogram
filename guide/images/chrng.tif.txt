@@ -1,0 +1,6 @@
+Files in analysis from the outside to the center
+Affected	CHRNG-10.vcf
+Affected	CHRNG-9.vcf
+Unaffected	CHRNG-6.vcf
+Unaffected	CHRNG-7.vcf
+Unaffected	CHRNG-8.vcf
