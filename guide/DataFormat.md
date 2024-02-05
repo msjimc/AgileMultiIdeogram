@@ -1,12 +1,12 @@
 ## Data file format
 
 ### VCF text files with .vcf extension 
-VCF files have a complex structure with the start consisting of a number of lines starting with '##' that describe the data format in the rest of the file. This is followed by a single line starting with '#' that describes the fields/columns in the rest of the file as outlined in the table below. The contents of the __FORMAT__ and __Sample__ columns are variable with the requirements of ```AgileROHFinder``` and ```AgileROHFilterer``` outlined in the 2nd table.
+VCF files have a complex structure with the start consisting of a number of lines starting with '##' that describe the data format in the rest of the file. This is followed by a single line starting with '#' that describes the fields/columns in the rest of the file as outlined in the table below. The contents of the __FORMAT__ and __Sample__ columns are variable with the requirements of ```AgileMultiIdeogram``` outlined in the 2nd table.
 
 
 |Header|Description|Possible values|Note|Required|
 |-|-|-|-|-|
-|#CHROM|Chromosome|The name of the reference sequence in the reference genome. For autosomal chromosomes it is a number (1-22). X, Y and MT typically refer to the mitrochondrial and sex chromosomes. Other sequences may be present that contain unlocated sequences, common viruses or common alternative haplotypes these tend to have complex names. <br /><br />These names may have the 'chr' prefix.|Only variants with values of 1 to 22 or chr1 to chr22 are retained|Yes|
+|#CHROM|Chromosome|The name of the reference sequence in the reference genome. For autosomal chromosomes it is a number (1-22). X, Y and MT typically refer to the mitochondrial and sex chromosomes. Other sequences may be present that contain unlocated sequences, common viruses or common alternative haplotypes these tend to have complex names. <br /><br />These names may have the 'chr' prefix.|Only variants with values of 1 to 22 or chr1 to chr22 are retained|Yes|
 |POS|Position|The variant's location in the reference sequence (The first base of the reference may be referenced as 0 and not 1).|Any whole number|Yes|
 |ID|Variant name| This can be any text value, but is typically either a RS id or a '.'|```AgileROHFinder``` and ```AgileROHFilterer``` may filter variants based on the presence of 'RS' at the start of the name|Optional|
 |REF|Variant's wild type allele|Any possible sequence of A, C, G and T|Only alleles of one nucleotide are retained|Yes|
@@ -36,7 +36,7 @@ As can be seen from the two tables the programs require the chromosome, position
 |Data type|Text with or without 'chr' prefix|Number|Text|Text (AA, AB, BB or NoCall)|
 
 
-### Affymetrix birdseed files files with .xtxtls extension 
+### Affymetrix birdseed files files with .txt extension 
 
 |Header|Chromosome|Chromosomal Position|dbSNP RS ID|Call|
 |-|-|-|-|-|
