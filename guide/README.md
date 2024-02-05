@@ -18,15 +18,17 @@ Figure 1: User interface of ```AgileMultiIdeogram```
 
 #### NGS variant data
 
-***Important Note: VCF files should only contain data for single individual.*** 
+***Important Note: VCF files should only contain data for a single individual.*** 
 
-To use NGS derived variant data, save the variants in the VCF format as '__*.vcf__' or with optional compression using gzip  as '__*.vcf.gz__' files and place all these VCF files in an empty folder and select it by pressing the ```VCF``` button. Likewise, when using variant data formatted as genome VCF files as '__*.g.vcf__' or with compression as '__*.g.vcf.gz__' files and place the files in a single folder and select the folder using the ```gVCF``` button.
+To use NGS derived variant data, save the variants in the VCF format with the '__*.vcf__' file extension or with optional compression using gzip with the '__*.vcf.gz__' file extensions and place all these VCF files in an empty folder and select it by pressing the ```VCF``` button. Likewise, when using variant data formatted as genome VCF files as '__*.g.vcf__' or with compression as '__*.g.vcf.gz__' files, place the files in a single folder and select this folder using the ```gVCF``` button.   
+
+ Do not mix *.vcf and *.g.vcf files in the same folder. 
 
 ##### VCF analysis Options
 
-By default variants without an RS id are ignored, ticking the ```Include variants with no RS ID``` checkbox options will override this behaviour and include all single base variants. 
+By default variants without an RS id are ignored, ticking the ```Include variants with no RS ID``` checkbox option will override this behaviour and include all single base variants. 
 
-When processing a variant ```AgileMultiIdeogram``` uses the read depth data of the alleles to determine the variants genotype rather than use the value in the VCF files. However, checking the ```Use genotype in VCF file``` checkbox will instead direct ```AgileMultiIdeogram``` to use the genotype in the VCF file. For high quality data derived from  alignments with a high read depth, this option makes little difference, but for data derived from lower read depth data or variants called with relaxed parameters, this may adversely affect the analysis. 
+When processing a variant ```AgileMultiIdeogram``` uses the read depth data of the alleles to determine the variants genotype rather than use the value in the VCF files. However, checking the ```Use genotype in VCF file``` checkbox will direct ```AgileMultiIdeogram``` to use the genotype in the VCF file. For high quality data derived from  alignments with a high read depth, this option makes little difference, but for data derived from lower read depth data or variants called with relaxed parameters, this may adversely affect the analysis. 
 
 Selecting ```Use genotype in VCF file``` or ```Include variants with no RS ID``` will affect all the VCF files in an analysis, but not the g.vcf files.  
 	
@@ -57,7 +59,7 @@ Data files from affected individuals must now be identified, by ticking the chec
 
 ### Analysing and visualising the data
 
-Since processing the data may take several minutes, the data is displayed as each files is processed. Consequently, the images initially contain just the cytogenetics banding patterns for each chromosome (e.g. figure 3), before each individual's data is added in turn. While its possible to view data in different ways, the menus on each of the windows consist of a core set of options, with only the ```Single chromosome view``` containing noticeably more options, consequently, the core set of options will be described once in the ```Linear ideogram view``` section.
+Since processing the data may take several minutes, the data is displayed as each files is processed. Consequently, the images initially contain just the cytogenetics banding patterns for each chromosome (e.g. figure 3), before each individual's data is added in turn. While its possible to view data in different ways, the menus on each of the windows consist of a core set of options, with only the ```Single chromosome view``` containing more options, consequently, the core set of options will be described once in the ```Linear ideogram view``` section.
 	
 ![Figure 3](images/figure003.PNG)
 
@@ -77,9 +79,9 @@ There is no limit to the number of individuals this window will display, if the 
 Figure 5: The *File* menu on each of the ```Viewer windows``` allows the regions data to be saved as either a text or image files.
 
 * The *File* menu on each of the ```Viewer windows``` allows the regions data to be saved as either text or image files. 
-  * The *Save 300 dpi image as* menu option allows the current image to be saved a publication ready TIFF file.
+  * The *Save 300 dpi image as...* menu option allows the current image to be saved as a publication ready TIFF file.
   * The *Export all intervals (long format)* menu option saves all the autozygous region data to a single file. The data for each original data file follows a line containing the file's name and then a column header line. Each region is then written as: Chromosome number&lt;tab&gt;start point (bp)&lt;tab&gt;End point (bp)&lt;tab&gt;region length (bp). At the end of the file the regions common to all the affected individuals	are listed.  
-  * The *Export all intervals (short format)* menu option allows the regions to be save as described above except each region's line is formatted as: "chr"chromosome number&lt;colon&gt;start point (bp)&lt;hyphen&gt;end point (bp). This format can be pasted directly in to various third party applications/web pages like The Genome browser or IGV allowing the contents, allowing the regions to be viewed.
+  * The *Export all intervals (short format)* menu option allows the regions to be save as described above except each region's line is formatted as: "chr"chromosome number&lt;colon&gt;start point (bp)&lt;hyphen&gt;end point (bp). This format can be pasted directly in to various third party applications/web pages like The Genome browser or IGV allowing the contents of the regions to be viewed.
   * The *Export common intervals only (short format)* menu option saves only the common regions to file, in the short format described above.
 	
 ##### The *Options* menu
@@ -123,8 +125,8 @@ Figure 9: Completed analysis, showing the display of autozygous regions in affec
 
 * *Menu options*: This window contains the same menu structure as the ```Linear Ideogram viewer```*window, except of the inclusion of 5 menu options (figure 9):
 *The *Options* menu contains 5 new extra options:
-  1) The *Make gap between autozygous regions bigger* and *Make gap between autozygous regions narrower* menu options increase and decrease the gap between the consecutive individuals.
-  2) The *Make autozygous regions deeper* and *Make autozygous regions thinner* menu options increase and decrease the thickness of the blocks used to show the extent of the autozygous regions.
+  1) The *Make gap between autozygous regions bigger* and *Make gap between autozygous regions narrower* menu options increase and decrease the gap between the consecutive individuals (compare Figure 8 to 9).
+  2) The *Make autozygous regions deeper* and *Make autozygous regions thinner* menu options increase and decrease the thickness of the blocks used to show the extent of the autozygous regions (compare Figure 8 to 9).
   3) The *Scale to chromosome 1* menu option sets whether the selected chromosome spans the entire image or is drawn to the same scale as chromosome 1 would be.   
 
 <hr />
@@ -154,7 +156,7 @@ Figure 11: Selecting the image display.
 
 #### Identifying affected individuals
 
-This will open a ```Affected``` window which allows you to identify which samples originate from affected individuals (Figure 12), in this case it is vcf files CHRNG-9.vcf and CHRNG-10.vcf. 
+This will open the ```Affected``` window which allows you to identify which samples originate from affected individuals (Figure 12), in this case it is vcf files CHRNG-9.vcf and CHRNG-10.vcf. 
 
 ![Figure 12](images/walkthrough3.png)
 
