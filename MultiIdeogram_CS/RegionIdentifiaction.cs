@@ -473,6 +473,7 @@ namespace  MultiIdeogram_CS
                             && items[indexes.GenotypeIndex].ToUpper() != "NOCALL" 
                             && Convert.ToSingle(items[indexes.Position]) != 0)
                         {
+                            items[indexes.ChromosomeIndex] = items[indexes.ChromosomeIndex].ToLower().Replace("chr", "");
                             switch (items[indexes.ChromosomeIndex].ToLower())
                             {
                                 case "x":
@@ -521,6 +522,7 @@ namespace  MultiIdeogram_CS
                             && items[indexes.GenotypeIndex].ToUpper() != "NOCALL" 
                             && Convert.ToSingle(items[indexes.Position]) != 0)
                         {
+                            items[indexes.ChromosomeIndex] = items[indexes.ChromosomeIndex].ToLower().Replace("chr", "");
                             switch (items[indexes.ChromosomeIndex].ToLower())
                             {
                                 case "x":
