@@ -12,7 +12,7 @@ Exome variant data must be formatted as VCF files, while SNP genotypes can be in
 
 ### Download
 
-The compiles ```AgileMultiIdeogram``` program can be downloaded [here](download/).
+The compiled ```AgileMultiIdeogram``` program and example data can be downloaded [here](download/).
 
 
 
