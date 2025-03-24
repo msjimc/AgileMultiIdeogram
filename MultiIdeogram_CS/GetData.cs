@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgileMultiIdeogram_CS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -464,6 +465,18 @@ namespace MultiIdeogram_CS
         private void GetData_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void userGuideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            guide gu = new guide();
+            gu.ShowDialog();           
+        }
+
+        private void testFileFormatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 fone = new Form1();
+            fone.ShowDialog();
         }
     }
 }

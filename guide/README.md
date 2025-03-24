@@ -8,6 +8,10 @@
 ### Important note  
 ```AgileMultiIdeogram``` is designed to work on VCF and microarray genotype data files that contain variant data for a single individual per file. If a file contains data for multiple individuals it will only process data for one sample.
 
+### No regions reported or error reported
+
+If your data files produce no regions or cannot be processed, press the ***Help*** > ***Test file format*** to check a data file's format and data content as described [here](TestDataFileFormat.MD).
+
 ### Entering data
 ![Figure 1](images/figure001.PNG)
 		

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GetData));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkVCFGenotype = new System.Windows.Forms.CheckBox();
             this.chkIncludeRS = new System.Windows.Forms.CheckBox();
             this.btngVCF = new System.Windows.Forms.Button();
             this.lblgVCF = new System.Windows.Forms.Label();
@@ -59,11 +60,15 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rdoMultiple = new System.Windows.Forms.RadioButton();
             this.rdoFolder = new System.Windows.Forms.RadioButton();
-            this.chkVCFGenotype = new System.Windows.Forms.CheckBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testFileFormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userGuideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -85,12 +90,22 @@
             this.groupBox1.Controls.Add(this.lblVCF);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(628, 312);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Analyses";
+            // 
+            // chkVCFGenotype
+            // 
+            this.chkVCFGenotype.AutoSize = true;
+            this.chkVCFGenotype.Location = new System.Drawing.Point(480, 72);
+            this.chkVCFGenotype.Name = "chkVCFGenotype";
+            this.chkVCFGenotype.Size = new System.Drawing.Size(142, 17);
+            this.chkVCFGenotype.TabIndex = 15;
+            this.chkVCFGenotype.Text = "Use genotype in VCF file";
+            this.chkVCFGenotype.UseVisualStyleBackColor = true;
             // 
             // chkIncludeRS
             // 
@@ -293,7 +308,7 @@
             // 
             this.btnQuit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQuit.Location = new System.Drawing.Point(17, 536);
+            this.btnQuit.Location = new System.Drawing.Point(17, 551);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(75, 23);
             this.btnQuit.TabIndex = 12;
@@ -309,7 +324,7 @@
             this.groupBox2.Controls.Add(this.btnLinear);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btnGo);
-            this.groupBox2.Location = new System.Drawing.Point(12, 420);
+            this.groupBox2.Location = new System.Drawing.Point(12, 435);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(628, 53);
             this.groupBox2.TabIndex = 13;
@@ -346,7 +361,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.btnReset);
-            this.groupBox3.Location = new System.Drawing.Point(12, 479);
+            this.groupBox3.Location = new System.Drawing.Point(12, 494);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(628, 51);
             this.groupBox3.TabIndex = 14;
@@ -379,7 +394,7 @@
             this.groupBox4.Controls.Add(this.btnText);
             this.groupBox4.Controls.Add(this.lblText);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Location = new System.Drawing.Point(12, 330);
+            this.groupBox4.Location = new System.Drawing.Point(12, 345);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(628, 82);
             this.groupBox4.TabIndex = 15;
@@ -408,28 +423,53 @@
             this.rdoFolder.Text = "Folder of files";
             this.rdoFolder.UseVisualStyleBackColor = true;
             // 
-            // chkVCFGenotype
+            // menuStrip1
             // 
-            this.chkVCFGenotype.AutoSize = true;
-            this.chkVCFGenotype.Location = new System.Drawing.Point(480, 72);
-            this.chkVCFGenotype.Name = "chkVCFGenotype";
-            this.chkVCFGenotype.Size = new System.Drawing.Size(142, 17);
-            this.chkVCFGenotype.TabIndex = 15;
-            this.chkVCFGenotype.Text = "Use genotype in VCF file";
-            this.chkVCFGenotype.UseVisualStyleBackColor = true;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(652, 24);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testFileFormatToolStripMenuItem,
+            this.userGuideToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // testFileFormatToolStripMenuItem
+            // 
+            this.testFileFormatToolStripMenuItem.Name = "testFileFormatToolStripMenuItem";
+            this.testFileFormatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testFileFormatToolStripMenuItem.Text = "Test file format";
+            this.testFileFormatToolStripMenuItem.Click += new System.EventHandler(this.testFileFormatToolStripMenuItem_Click);
+            // 
+            // userGuideToolStripMenuItem
+            // 
+            this.userGuideToolStripMenuItem.Name = "userGuideToolStripMenuItem";
+            this.userGuideToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.userGuideToolStripMenuItem.Text = "User guide";
+            this.userGuideToolStripMenuItem.Click += new System.EventHandler(this.userGuideToolStripMenuItem_Click);
             // 
             // GetData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 571);
+            this.ClientSize = new System.Drawing.Size(652, 586);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "GetData";
             this.Text = "Data collection";
@@ -442,7 +482,10 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -479,5 +522,9 @@
         private System.Windows.Forms.Button btnSingle;
         private System.Windows.Forms.CheckBox chkIncludeRS;
         private System.Windows.Forms.CheckBox chkVCFGenotype;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testFileFormatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userGuideToolStripMenuItem;
     }
 }
