@@ -8,12 +8,12 @@
 ### Important note  
 ```AgileMultiIdeogram``` is designed to work on VCF and microarray genotype data files that contain variant data for a single individual per file. If a file contains data for multiple individuals it will only process data for one sample.
 
-### No regions reported or error reported
+## No regions reported or errors reported
 
 If your data files produce no regions or cannot be processed, press the ***Help*** > ***Test file format*** to check a data file's format and data content as described [here](TestDataFileFormat.MD).
 
 ### Entering data
-![Figure 1](images/figure001.PNG)
+![Figure 1](images/Figure1.jpg)
 		
 Figure 1: User interface of ```AgileMultiIdeogram```
 	
@@ -62,6 +62,8 @@ Figure 2: Data files from affected subjects are selected using the ```Affecteds`
 Data files from affected individuals must now be identified, by ticking the check boxes next to their filenames. Once the disease status appropriate to each file has been specified, the analysis is started by clicking ```OK```. This will close the current window and open a new ```Ideogram viewer``` window as shown in Figures 3, 7 and 8.
 
 ### Analysing and visualising the data
+
+***No regions reported or errors reported:*** If your data files produce no regions or cannot be processed, press the ***Help*** > ***Test file format*** to check a data file's format and data content as described [here](TestDataFileFormat.MD).
 
 Since processing the data may take several minutes, the data is displayed as each files is processed. Consequently, the images initially contain just the cytogenetics banding patterns for each chromosome (e.g. figure 3), before each individual's data is added in turn. While its possible to view data in different ways, the menus on each of the windows consist of a core set of options, with only the ```Single chromosome view``` containing more options, consequently, the core set of options will be described once in the ```Linear ideogram view``` section.
 	
