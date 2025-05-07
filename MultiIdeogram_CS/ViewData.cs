@@ -51,7 +51,7 @@ namespace MultiIdeogram_CS
 
         public void GetData(bool IgnoreRSField, bool VCFGenotypes)
         {
-            getRegions( IgnoreRSField, VCFGenotypes);
+            getRegions(IgnoreRSField, VCFGenotypes);
             MinimumSNPRegions = CreateMinimumArray(SNPRegions, Affecteds);
             p1.Image = Draw(4);
         }
@@ -179,7 +179,11 @@ namespace MultiIdeogram_CS
 
                 while (stopNow == false)
                 {
+                    try { 
                     thisRegion = new DNARegion(intervals[indexes[0]][place[0]]);
+                    }
+                    catch (Exception ex)
+                    { break; }
                     int index = 0;
 
                     addThisRegion = true;

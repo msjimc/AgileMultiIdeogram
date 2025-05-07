@@ -39,8 +39,6 @@ namespace  MultiIdeogram_CS
                 System.IO.FileInfo fi = new System.IO.FileInfo(theFile);
                 if (fi.Length > 1000000)
                 {
-                    StartRunsCutOff = 386;
-                    StartExclusionCutOff = 575;
                     RegionIdenificationAffyTXT(theFile);
                 }
                 else
@@ -172,7 +170,6 @@ namespace  MultiIdeogram_CS
 
         private void RegionIdenificationVCF(string theFile, int theMinimumReadDepth, bool UseHarshGenotyping, bool isGVCF, bool IgnoreRSField, bool VCFGenotypes)
         {
-
             try
             {
                 c1to25 = new SeqSNP[26][];
@@ -431,7 +428,7 @@ namespace  MultiIdeogram_CS
                 if (result.Position == -1) { answer = -1; }
                 if (result.RSIndex == -1) { answer = -1; }
                 if (result.GenotypeIndex == -1) { answer = -1; }
-
+                
                 if (answer == 1)
                     { result.OK = true;}
                 }
@@ -629,7 +626,7 @@ namespace  MultiIdeogram_CS
                 if (result.Position == -1) { answer = -1; }
                 if (result.RSIndex == -1) { answer = -1; }
                 if (result.GenotypeIndex == -1) { answer = -1; }
-
+                result.GenotypeIndex = 1;
                 if (answer == 1)
                 { result.OK = true; }
             }
