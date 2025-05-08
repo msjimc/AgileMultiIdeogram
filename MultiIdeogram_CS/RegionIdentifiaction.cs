@@ -33,13 +33,15 @@ namespace  MultiIdeogram_CS
         {
 
             if (theFile.ToLower().Substring(theFile.LastIndexOf(".")).Equals(".xls") == true)
-            { RegionIdenificationAffyXLS(theFile); }
+            { 
+                RegionIdenificationAffyXLS(theFile); 
+            }
             if (theFile.ToLower().Substring(theFile.LastIndexOf(".")).Equals(".txt") == true)
             {
                 System.IO.FileInfo fi = new System.IO.FileInfo(theFile);
                 if (fi.Length > 1000000)
                 {
-                    RegionIdenificationAffyTXT(theFile);
+                   RegionIdenificationAffyTXT(theFile);
                 }
                 else
                 { theRegions = RegionIdentificationUserTXT(theFile); }
@@ -273,13 +275,18 @@ namespace  MultiIdeogram_CS
                 fs1 = new System.IO.StreamReader(DataFile);
                 if (fs1.Peek() > 0) { fs1.ReadLine(); }
 
+                int itemCount = 0;
+                if (indexes.Position > itemCount) { itemCount = indexes.Position; }
+                if (indexes.ChromosomeIndex > itemCount) { itemCount = indexes.ChromosomeIndex; }
+                if (indexes.GenotypeIndex > itemCount) { itemCount = indexes.GenotypeIndex; }
+                if (indexes.RSIndex > itemCount) { itemCount = indexes.RSIndex; }
                 while (fs1.Peek() > 0)
                 {
                     line = fs1.ReadLine();
                     items = line.Split('\t');
-                    if (items.Length > 3)
-                    {
-                        if (items[indexes.RSIndex] != "" && items[indexes.GenotypeIndex].ToUpper() != "NOCALL" && Convert.ToSingle(items[indexes.Position]) != 0)
+                    if (items.Length > itemCount)
+                    {                        
+                        if (items[indexes.RSIndex] != "" && items[indexes.GenotypeIndex].ToUpper() != "NOCALL" && string.IsNullOrEmpty(items[indexes.Position]) == false && Convert.ToSingle(items[indexes.Position]) != 0)
                         {
                             switch (items[indexes.ChromosomeIndex].ToLower())
                             {
@@ -322,7 +329,7 @@ namespace  MultiIdeogram_CS
 
                     if (items.Length > 3)
                     {
-                        if (items[indexes.RSIndex] != "" && items[indexes.GenotypeIndex].ToUpper() != "NOCALL" && Convert.ToSingle(items[indexes.Position]) != 0)
+                        if (items[indexes.RSIndex] != "" && items[indexes.GenotypeIndex].ToUpper() != "NOCALL" && string.IsNullOrEmpty(items[indexes.Position]) == false && Convert.ToSingle(items[indexes.Position]) != 0)
                         {
                             switch (items[indexes.ChromosomeIndex].ToLower())
                             {
@@ -401,7 +408,7 @@ namespace  MultiIdeogram_CS
 
             try
                 {
-                fs = new System.IO.StreamReader(DataFile);
+                fs = new System.IO.StreamReader(DataFile); 
 
                 strDataArray[0] = fs.ReadLine();
                 strDataArray[1] = fs.ReadLine();
