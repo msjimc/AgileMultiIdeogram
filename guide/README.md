@@ -5,10 +5,11 @@
 
 ```AgileMultiIdeogram``` displays the locations of autozygous regions in multiple individuals one chromosome at a time or against a linear or circular ideogram of chromosomes 1–22. The autozygous regions can be supplied as predefined regions in a text file or they can be automatically identified either from exome variant lists or microarray SNP genotype data.
 
-### Important points  
+### Important points 
+<b>Multi sample VCF files</b>: 
 ```AgileMultiIdeogram``` is designed to work on VCF and microarray genotype data files that contain variant data for a single individual per file. If a file contains data for multiple individuals it will only process data for one sample.
 
-The parameters used by ```AgileMultiIdeogram``` have been optimised as described in the paper. If you would like to optimise the application, please contact me and I'll try and help; however, please not the process is not trivial and requires access to significant computing power such as a University High performance computing, such as, [Aire](https://arc.leeds.ac.uk/platforms/aire/) at the University of Leeds.
+<b>Parameter optimisation</b>: The parameters used by ```AgileMultiIdeogram``` have been optimised as described in the paper. If you would like to optimise the application, please contact me and I'll try and help; however, please note the process is not trivial and requires access to significant computing power such as a University High performance computing, such as, [Aire](https://arc.leeds.ac.uk/platforms/aire/) at the University of Leeds.
 
 ## No regions reported or errors reported
 
