@@ -14,6 +14,11 @@ Exome variant data must be formatted as VCF files, while SNP genotypes can be in
 
 The compiled ```AgileMultiIdeogram``` program and example data can be downloaded [here](download/).
 
+### Citation
+
+Watson CM, Lascelles C, Raynor M, Elpidorou M, Hany U, Crinnion L, Johnson CA, Sheridan E, Markham AF, Poulter JA, Bonthron DT, Carr IM.  
+[AgileMultiIdeogram: Rapid identification and visualization of autozygous regions using Illumina short-read sequencing data.](https://www.mdpi.com/2079-7737/14/6/666)  
+Biology 2025, 14(6), 666
 
 
 
